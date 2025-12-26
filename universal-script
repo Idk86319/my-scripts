@@ -142,7 +142,7 @@ local function WZORSG_fake_script() -- Frame.DragScript
 	
 	-- Load animation
 	frame.Size = UDim2.new(0, 0, 0, 0)
-	frame.Position = UDim2.new(0.42, 0, 0.32, 0)
+	frame.Position = UDim2.new(0.31, 0, 0.23, 0)
 	frame.BackgroundTransparency = 1
 	
 	local sizeTween = TweenService:Create(frame, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
