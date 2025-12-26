@@ -101,7 +101,7 @@ TextButton_4.BorderColor3 = Color3.fromRGB(68, 0, 255)
 TextButton_4.Position = UDim2.new(0.559820175, 0, 0.243749306, 0)
 TextButton_4.Size = UDim2.new(0, 200, 0, 50)
 TextButton_4.Font = Enum.Font.DenkOne
-TextButton_4.Text = "Tiger x hub"
+TextButton_4.Text = "Ghost hub(has a key)"
 TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.TextSize = 20.000
 TextButton_4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
@@ -112,7 +112,7 @@ TextButton_5.BorderColor3 = Color3.fromRGB(68, 0, 255)
 TextButton_5.Position = UDim2.new(0.559820235, 0, 0.477487594, 0)
 TextButton_5.Size = UDim2.new(0, 200, 0, 50)
 TextButton_5.Font = Enum.Font.DenkOne
-TextButton_5.Text = "Ghost hub(has a key)"
+TextButton_5.Text = "SCRIPTHUBV3"
 TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_5.TextSize = 20.000
 TextButton_5.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
@@ -130,7 +130,7 @@ TextButton_6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 
 -- Scripts:
 
-local function XBVFU_fake_script() -- Frame.DragScript 
+local function FLUPM_fake_script() -- Frame.DragScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -174,8 +174,8 @@ local function XBVFU_fake_script() -- Frame.DragScript
 		end
 	end)
 end
-coroutine.wrap(XBVFU_fake_script)()
-local function FXMAWCF_fake_script() -- Frame.HideFrameScript 
+coroutine.wrap(FLUPM_fake_script)()
+local function PQSW_fake_script() -- Frame.HideFrameScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local TweenService = game:GetService("TweenService")
@@ -213,8 +213,8 @@ local function FXMAWCF_fake_script() -- Frame.HideFrameScript
 		end)
 	end)
 end
-coroutine.wrap(FXMAWCF_fake_script)()
-local function NWEGDUW_fake_script() -- TextButton.Button Function 
+coroutine.wrap(PQSW_fake_script)()
+local function IJMOR_fake_script() -- TextButton.Button Function 
 	local script = Instance.new('Script', TextButton)
 
 	local button = script.Parent
@@ -226,8 +226,8 @@ local function NWEGDUW_fake_script() -- TextButton.Button Function
 		loadstring(game:HttpGet("https://pastebin.com/raw/Piw5bqGq"))()
 	end)
 end
-coroutine.wrap(NWEGDUW_fake_script)()
-local function OJTED_fake_script() -- TextButton_2.Button Function 
+coroutine.wrap(IJMOR_fake_script)()
+local function WUGPV_fake_script() -- TextButton_2.Button Function 
 	local script = Instance.new('Script', TextButton_2)
 
 	local button = script.Parent
@@ -239,8 +239,8 @@ local function OJTED_fake_script() -- TextButton_2.Button Function
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
 	end)
 end
-coroutine.wrap(OJTED_fake_script)()
-local function CLQB_fake_script() -- TextButton_3.Button Function 
+coroutine.wrap(WUGPV_fake_script)()
+local function WHMVLH_fake_script() -- TextButton_3.Button Function 
 	local script = Instance.new('Script', TextButton_3)
 
 	local button = script.Parent
@@ -252,8 +252,8 @@ local function CLQB_fake_script() -- TextButton_3.Button Function
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 	end)
 end
-coroutine.wrap(CLQB_fake_script)()
-local function HKJKKS_fake_script() -- TextButton_4.Button Function 
+coroutine.wrap(WHMVLH_fake_script)()
+local function VQGKO_fake_script() -- TextButton_4.Button Function 
 	local script = Instance.new('Script', TextButton_4)
 
 	local button = script.Parent
@@ -262,11 +262,11 @@ local function HKJKKS_fake_script() -- TextButton_4.Button Function
 		getgenv().request = http_request
 		http.request = http_request
 	
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/balintTheDevX/Tiger-X-V3/main/Tiger%20X%20V3.5%20Fixed"))()
+		loadstring(game:HttpGet("https://pastefy.app/h9sod1M8/raw"))()
 	end)
 end
-coroutine.wrap(HKJKKS_fake_script)()
-local function YGWZTOC_fake_script() -- TextButton_5.Button Function 
+coroutine.wrap(VQGKO_fake_script)()
+local function JXCZ_fake_script() -- TextButton_5.Button Function 
 	local script = Instance.new('Script', TextButton_5)
 
 	local button = script.Parent
@@ -274,12 +274,12 @@ local function YGWZTOC_fake_script() -- TextButton_5.Button Function
 	button.MouseButton1Click:Connect(function()
 		getgenv().request = http_request
 		http.request = http_request
-
-		loadstring(game:HttpGet("https://pastefy.app/h9sod1M8/raw"))()
+	
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3", true))()
 	end)
 end
-coroutine.wrap(YGWZTOC_fake_script)()
-local function QNCCSXR_fake_script() -- TextButton_6.Button Function 
+coroutine.wrap(JXCZ_fake_script)()
+local function QNXP_fake_script() -- TextButton_6.Button Function 
 	local script = Instance.new('Script', TextButton_6)
 
 	local button = script.Parent
@@ -291,4 +291,4 @@ local function QNCCSXR_fake_script() -- TextButton_6.Button Function
 		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
 	end)
 end
-coroutine.wrap(QNCCSXR_fake_script)()
+coroutine.wrap(QNXP_fake_script)()
