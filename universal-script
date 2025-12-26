@@ -274,8 +274,8 @@ local function YGWZTOC_fake_script() -- TextButton_5.Button Function
 	button.MouseButton1Click:Connect(function()
 		getgenv().request = http_request
 		http.request = http_request
-	
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3", true))()
+
+		loadstring(game:HttpGet("https://pastefy.app/h9sod1M8/raw"))()
 	end)
 end
 coroutine.wrap(YGWZTOC_fake_script)()
