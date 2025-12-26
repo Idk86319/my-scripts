@@ -1,7 +1,8 @@
 -- ===== PLACE CHECK =====
 local allowedPlaces = {
     [129009554587176] = true,
-    [76558904092080] = true
+    [76558904092080] = true,
+	[131884594917121] = true
 }
 
 if not allowedPlaces[game.PlaceId] then
