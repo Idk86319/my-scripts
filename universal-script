@@ -10,6 +10,10 @@ local TextButton_2 = Instance.new("TextButton")
 local TextButton_3 = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local TextButton1 = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local TextButton_6 = Instance.new("TextButton")
 
 --Properties:
 
@@ -18,10 +22,10 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(1, 0, 2)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.413652241, 0, 0.294952899, 0)
-Frame.Size = UDim2.new(0.172121048, 0, 0.408130646, 0)
+Frame.BorderColor3 = Color3.fromRGB(68, 0, 255)
+Frame.BorderSizePixel = 2
+Frame.Position = UDim2.new(0.0135064749, 0, 0.543335855, 0)
+Frame.Size = UDim2.new(0.387135595, 0, 0.432710201, 0)
 
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -60,7 +64,7 @@ TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderColor3 = Color3.fromRGB(68, 0, 255)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.0798912644, 0, 0.0264347903, 0)
+TextLabel.Position = UDim2.new(0.329802573, 0, 0.0114864381, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 50)
 TextLabel.Font = Enum.Font.DenkOne
 TextLabel.Text = "What script?"
@@ -71,16 +75,62 @@ TextButton1.Name = "TextButton1"
 TextButton1.Parent = Frame
 TextButton1.BackgroundColor3 = Color3.fromRGB(156, 43, 31)
 TextButton1.BorderColor3 = Color3.fromRGB(67, 26, 255)
-TextButton1.Position = UDim2.new(0.405677736, 0, 0.88822037, 0)
+TextButton1.Position = UDim2.new(0.465172201, 0, 0.879251361, 0)
 TextButton1.Size = UDim2.new(0, 43, 0, 21)
 TextButton1.Font = Enum.Font.SourceSans
 TextButton1.Text = "Close"
 TextButton1.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton1.TextSize = 14.000
 
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.438101083, 0, 0.158686996, 0)
+TextLabel_2.Size = UDim2.new(0, 73, 0, 18)
+TextLabel_2.Font = Enum.Font.DenkOne
+TextLabel_2.Text = "universal"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextButton_4.Parent = Frame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderColor3 = Color3.fromRGB(68, 0, 255)
+TextButton_4.Position = UDim2.new(0.559820175, 0, 0.243749306, 0)
+TextButton_4.Size = UDim2.new(0, 200, 0, 50)
+TextButton_4.Font = Enum.Font.DenkOne
+TextButton_4.Text = "Tiger x hub"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextSize = 20.000
+TextButton_4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+TextButton_5.Parent = Frame
+TextButton_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.BorderColor3 = Color3.fromRGB(68, 0, 255)
+TextButton_5.Position = UDim2.new(0.559820235, 0, 0.477487594, 0)
+TextButton_5.Size = UDim2.new(0, 200, 0, 50)
+TextButton_5.Font = Enum.Font.DenkOne
+TextButton_5.Text = "SCRIPTHUBV3"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextSize = 20.000
+TextButton_5.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+TextButton_6.Parent = Frame
+TextButton_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.BorderColor3 = Color3.fromRGB(68, 0, 255)
+TextButton_6.Position = UDim2.new(0.559820235, 0, 0.705336571, 0)
+TextButton_6.Size = UDim2.new(0, 200, 0, 50)
+TextButton_6.Font = Enum.Font.DenkOne
+TextButton_6.Text = "Orca hub"
+TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.TextSize = 20.000
+TextButton_6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
 -- Scripts:
 
-local function XTFR_fake_script() -- Frame.DragScript 
+local function XBVFU_fake_script() -- Frame.DragScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -96,8 +146,8 @@ local function XTFR_fake_script() -- Frame.DragScript
 	frame.BackgroundTransparency = 1
 	
 	local sizeTween = TweenService:Create(frame, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
-		Size = UDim2.new(0, 233, 0, 306),
-		BackgroundTransparency = 0
+		Size = UDim2.new(0, 531, 0, 344),
+		BackgroundTransparency = 0.1
 	})
 	
 	sizeTween:Play()
@@ -124,8 +174,8 @@ local function XTFR_fake_script() -- Frame.DragScript
 		end
 	end)
 end
-coroutine.wrap(XTFR_fake_script)()
-local function NXZTMX_fake_script() -- Frame.HideFrameScript 
+coroutine.wrap(XBVFU_fake_script)()
+local function FXMAWCF_fake_script() -- Frame.HideFrameScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local TweenService = game:GetService("TweenService")
@@ -163,8 +213,8 @@ local function NXZTMX_fake_script() -- Frame.HideFrameScript
 		end)
 	end)
 end
-coroutine.wrap(NXZTMX_fake_script)()
-local function YGWKD_fake_script() -- TextButton.Button Function 
+coroutine.wrap(FXMAWCF_fake_script)()
+local function NWEGDUW_fake_script() -- TextButton.Button Function 
 	local script = Instance.new('Script', TextButton)
 
 	local button = script.Parent
@@ -173,11 +223,11 @@ local function YGWKD_fake_script() -- TextButton.Button Function
 		getgenv().request = http_request
 		http.request = http_request
 	
-		loadstring(game:HttpGet("https://rayfield.xvchubontop.workers.dev/"))()
+		loadstring(game:HttpGet("https://pastebin.com/raw/Piw5bqGq"))()
 	end)
 end
-coroutine.wrap(YGWKD_fake_script)()
-local function OXTHDXY_fake_script() -- TextButton_2.Button Function 
+coroutine.wrap(NWEGDUW_fake_script)()
+local function OJTED_fake_script() -- TextButton_2.Button Function 
 	local script = Instance.new('Script', TextButton_2)
 
 	local button = script.Parent
@@ -189,8 +239,8 @@ local function OXTHDXY_fake_script() -- TextButton_2.Button Function
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
 	end)
 end
-coroutine.wrap(OXTHDXY_fake_script)()
-local function VQDS_fake_script() -- TextButton_3.Button Function 
+coroutine.wrap(OJTED_fake_script)()
+local function CLQB_fake_script() -- TextButton_3.Button Function 
 	local script = Instance.new('Script', TextButton_3)
 
 	local button = script.Parent
@@ -202,4 +252,43 @@ local function VQDS_fake_script() -- TextButton_3.Button Function
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 	end)
 end
-coroutine.wrap(VQDS_fake_script)()
+coroutine.wrap(CLQB_fake_script)()
+local function HKJKKS_fake_script() -- TextButton_4.Button Function 
+	local script = Instance.new('Script', TextButton_4)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		getgenv().request = http_request
+		http.request = http_request
+	
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/balintTheDevX/Tiger-X-V3/main/Tiger%20X%20V3.5%20Fixed"))()
+	end)
+end
+coroutine.wrap(HKJKKS_fake_script)()
+local function YGWZTOC_fake_script() -- TextButton_5.Button Function 
+	local script = Instance.new('Script', TextButton_5)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		getgenv().request = http_request
+		http.request = http_request
+	
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3", true))()
+	end)
+end
+coroutine.wrap(YGWZTOC_fake_script)()
+local function QNCCSXR_fake_script() -- TextButton_6.Button Function 
+	local script = Instance.new('Script', TextButton_6)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		getgenv().request = http_request
+		http.request = http_request
+	
+		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
+	end)
+end
+coroutine.wrap(QNCCSXR_fake_script)()
