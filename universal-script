@@ -130,7 +130,7 @@ TextButton_6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 
 -- Scripts:
 
-local function FLUPM_fake_script() -- Frame.DragScript 
+local function WZORSG_fake_script() -- Frame.DragScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -174,8 +174,8 @@ local function FLUPM_fake_script() -- Frame.DragScript
 		end
 	end)
 end
-coroutine.wrap(FLUPM_fake_script)()
-local function PQSW_fake_script() -- Frame.HideFrameScript 
+coroutine.wrap(WZORSG_fake_script)()
+local function NPEF_fake_script() -- Frame.HideFrameScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local TweenService = game:GetService("TweenService")
@@ -213,8 +213,8 @@ local function PQSW_fake_script() -- Frame.HideFrameScript
 		end)
 	end)
 end
-coroutine.wrap(PQSW_fake_script)()
-local function IJMOR_fake_script() -- TextButton.Button Function 
+coroutine.wrap(NPEF_fake_script)()
+local function RAYN_fake_script() -- TextButton.Button Function 
 	local script = Instance.new('Script', TextButton)
 
 	local button = script.Parent
@@ -226,8 +226,8 @@ local function IJMOR_fake_script() -- TextButton.Button Function
 		loadstring(game:HttpGet("https://rayfield.xvchubontop.workers.dev/"))()
 	end)
 end
-coroutine.wrap(IJMOR_fake_script)()
-local function WUGPV_fake_script() -- TextButton_2.Button Function 
+coroutine.wrap(RAYN_fake_script)()
+local function GYCOZM_fake_script() -- TextButton_2.Button Function 
 	local script = Instance.new('Script', TextButton_2)
 
 	local button = script.Parent
@@ -239,8 +239,8 @@ local function WUGPV_fake_script() -- TextButton_2.Button Function
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
 	end)
 end
-coroutine.wrap(WUGPV_fake_script)()
-local function WHMVLH_fake_script() -- TextButton_3.Button Function 
+coroutine.wrap(GYCOZM_fake_script)()
+local function OIKGS_fake_script() -- TextButton_3.Button Function 
 	local script = Instance.new('Script', TextButton_3)
 
 	local button = script.Parent
@@ -252,8 +252,8 @@ local function WHMVLH_fake_script() -- TextButton_3.Button Function
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 	end)
 end
-coroutine.wrap(WHMVLH_fake_script)()
-local function VQGKO_fake_script() -- TextButton_4.Button Function 
+coroutine.wrap(OIKGS_fake_script)()
+local function KMTIBND_fake_script() -- TextButton_4.Button Function 
 	local script = Instance.new('Script', TextButton_4)
 
 	local button = script.Parent
@@ -265,8 +265,8 @@ local function VQGKO_fake_script() -- TextButton_4.Button Function
 		loadstring(game:HttpGet("https://pastefy.app/h9sod1M8/raw"))()
 	end)
 end
-coroutine.wrap(VQGKO_fake_script)()
-local function JXCZ_fake_script() -- TextButton_5.Button Function 
+coroutine.wrap(KMTIBND_fake_script)()
+local function PQZIPAV_fake_script() -- TextButton_5.Button Function 
 	local script = Instance.new('Script', TextButton_5)
 
 	local button = script.Parent
@@ -278,8 +278,8 @@ local function JXCZ_fake_script() -- TextButton_5.Button Function
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3", true))()
 	end)
 end
-coroutine.wrap(JXCZ_fake_script)()
-local function QNXP_fake_script() -- TextButton_6.Button Function 
+coroutine.wrap(PQZIPAV_fake_script)()
+local function ZOHY_fake_script() -- TextButton_6.Button Function 
 	local script = Instance.new('Script', TextButton_6)
 
 	local button = script.Parent
@@ -291,4 +291,4 @@ local function QNXP_fake_script() -- TextButton_6.Button Function
 		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
 	end)
 end
-coroutine.wrap(QNXP_fake_script)()
+coroutine.wrap(ZOHY_fake_script)()
