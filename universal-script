@@ -249,7 +249,7 @@ local function OIKGS_fake_script() -- TextButton_3.Button Function
 		getgenv().request = http_request
 		http.request = http_request
 	
-		--loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 	end)
 end
 coroutine.wrap(OIKGS_fake_script)()
