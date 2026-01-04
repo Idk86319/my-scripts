@@ -23,19 +23,21 @@ Frame.Size = UDim2.new(0, 124, 0, 74)
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
+TextLabel.BorderColor3 = Color3.fromRGB(223, 75, 255)
+TextLabel.BorderSizePixel = 9
 TextLabel.Position = UDim2.new(0, 0, 0.0135135138, 0)
 TextLabel.Size = UDim2.new(0, 124, 0, 73)
 TextLabel.Font = Enum.Font.Arcade
+TextLabel.Text = "HI"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
+TextLabel.TextSize = 50.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(0, 49, 217)
+TextLabel.TextStrokeTransparency = 0.000
 TextLabel.TextWrapped = true
 
 -- Scripts:
 
-local function TEYSZH_fake_script() -- TextLabel.fps script 
+local function WWBWR_fake_script() -- TextLabel.fps script 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local Stats = game:GetService("Stats")
@@ -75,8 +77,8 @@ local function TEYSZH_fake_script() -- TextLabel.fps script
 		)
 	end
 end
-coroutine.wrap(TEYSZH_fake_script)()
-local function AEZNZBY_fake_script() -- TextLabel.drag script 
+coroutine.wrap(WWBWR_fake_script)()
+local function MFKUP_fake_script() -- TextLabel.drag script 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local frame = script.Parent
@@ -107,4 +109,4 @@ local function AEZNZBY_fake_script() -- TextLabel.drag script
 		end
 	end)
 end
-coroutine.wrap(AEZNZBY_fake_script)()
+coroutine.wrap(MFKUP_fake_script)()
