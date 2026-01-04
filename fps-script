@@ -35,40 +35,39 @@ TextLabel.TextWrapped = true
 
 -- Scripts:
 
-local function GYRTI_fake_script() -- TextLabel.LocalScript 
+local function TEYSZH_fake_script() -- TextLabel.fps script 
 	local script = Instance.new('LocalScript', TextLabel)
 
-		-- Services
 	local Stats = game:GetService("Stats")
 	local RunService = game:GetService("RunService")
-
+	
 	-- Reference to the existing TextLabel
 	local textLabel = script.Parent
 	assert(textLabel:IsA("TextLabel"), "Script must be inside a TextLabel")
-
+	
 	-- FPS calculation
 	local frames = 0
 	local lastTime = tick()
 	local fps = 0
-
+	
 	RunService.RenderStepped:Connect(function()
 		frames += 1
 		local now = tick()
-
+	
 		if now - lastTime >= 1 then
 			fps = frames
 			frames = 0
 			lastTime = now
 		end
 	end)
-
+	
 	-- Update text
 	while true do
 		task.wait(0.3)
-
+	
 		local pingStat = Stats.Network.ServerStatsItem["Data Ping"]
 		local ping = math.floor(pingStat:GetValue())
-
+	
 		textLabel.Text = string.format(
 			"FPS: %d\nPing: %d ",
 			fps,
@@ -76,4 +75,36 @@ local function GYRTI_fake_script() -- TextLabel.LocalScript
 		)
 	end
 end
-coroutine.wrap(GYRTI_fake_script)()
+coroutine.wrap(TEYSZH_fake_script)()
+local function AEZNZBY_fake_script() -- TextLabel.drag script 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local frame = script.Parent
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	local dragging = false
+	local dragStart = nil
+	local startPos = nil
+	
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			local delta = input.Position - dragStart
+			frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		end
+	end)
+	
+	UserInputService.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+end
+coroutine.wrap(AEZNZBY_fake_script)()
