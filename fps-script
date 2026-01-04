@@ -64,7 +64,7 @@ local function GYRTI_fake_script() -- TextLabel.LocalScript
 
 	-- Update text
 	while true do
-		task.wait(0.1)
+		task.wait(0.3)
 
 		local pingStat = Stats.Network.ServerStatsItem["Data Ping"]
 		local ping = math.floor(pingStat:GetValue())
