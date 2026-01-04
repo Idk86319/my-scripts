@@ -30,14 +30,15 @@ TextLabel.Size = UDim2.new(0, 124, 0, 73)
 TextLabel.Font = Enum.Font.Arcade
 TextLabel.Text = "HI"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 50.000
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
 TextLabel.TextStrokeColor3 = Color3.fromRGB(0, 49, 217)
 TextLabel.TextStrokeTransparency = 0.000
 TextLabel.TextWrapped = true
 
 -- Scripts:
 
-local function WWBWR_fake_script() -- TextLabel.fps script 
+local function IRTZ_fake_script() -- TextLabel.fps script 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local Stats = game:GetService("Stats")
@@ -77,8 +78,8 @@ local function WWBWR_fake_script() -- TextLabel.fps script
 		)
 	end
 end
-coroutine.wrap(WWBWR_fake_script)()
-local function MFKUP_fake_script() -- TextLabel.drag script 
+coroutine.wrap(IRTZ_fake_script)()
+local function VVQNYVD_fake_script() -- TextLabel.drag script 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local frame = script.Parent
@@ -109,4 +110,4 @@ local function MFKUP_fake_script() -- TextLabel.drag script
 		end
 	end)
 end
-coroutine.wrap(MFKUP_fake_script)()
+coroutine.wrap(VVQNYVD_fake_script)()
