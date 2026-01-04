@@ -38,7 +38,7 @@ TextLabel.TextWrapped = true
 
 -- Scripts:
 
-local function IRTZ_fake_script() -- TextLabel.fps script 
+local function PEAVHA_fake_script() -- TextLabel.fps script 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local Stats = game:GetService("Stats")
@@ -78,8 +78,8 @@ local function IRTZ_fake_script() -- TextLabel.fps script
 		)
 	end
 end
-coroutine.wrap(IRTZ_fake_script)()
-local function VVQNYVD_fake_script() -- TextLabel.drag script 
+coroutine.wrap(PEAVHA_fake_script)()
+local function QBFYUY_fake_script() -- TextLabel.drag script 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local frame = script.Parent
@@ -110,4 +110,4 @@ local function VVQNYVD_fake_script() -- TextLabel.drag script
 		end
 	end)
 end
-coroutine.wrap(VVQNYVD_fake_script)()
+coroutine.wrap(QBFYUY_fake_script)()
