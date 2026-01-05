@@ -146,7 +146,7 @@ local function OVCL_fake_script() -- TextButton.Button Function
 		getgenv().request = http_request
 		http.request = http_request
 	
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/GiftStein1/pepehook-loader/refs/heads/main/loader.lua"))()
+		loadstring(game:HttpGet("https://wings.ac/loader"
 	end)
 end
 coroutine.wrap(OVCL_fake_script)()
