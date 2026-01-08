@@ -1,3 +1,4 @@
+
 -- Gui to Lua
 -- Version: 3.2
 
@@ -220,9 +221,7 @@ local function RAYN_fake_script() -- TextButton.Button Function
 	local button = script.Parent
 	
 	button.MouseButton1Click:Connect(function()
-		getgenv().request = http_request
-		http.request = http_request
-	
+
 		loadstring(game:HttpGet("https://rayfield.xvchubontop.workers.dev/"))()
 	end)
 end
@@ -233,9 +232,7 @@ local function GYCOZM_fake_script() -- TextButton_2.Button Function
 	local button = script.Parent
 	
 	button.MouseButton1Click:Connect(function()
-		getgenv().request = http_request
-		http.request = http_request
-	
+
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
 	end)
 end
@@ -246,9 +243,7 @@ local function OIKGS_fake_script() -- TextButton_3.Button Function
 	local button = script.Parent
 	
 	button.MouseButton1Click:Connect(function()
-		getgenv().request = http_request
-		http.request = http_request
-	
+
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 	end)
 end
@@ -259,9 +254,7 @@ local function KMTIBND_fake_script() -- TextButton_4.Button Function
 	local button = script.Parent
 	
 	button.MouseButton1Click:Connect(function()
-		getgenv().request = http_request
-		http.request = http_request
-	
+
 		loadstring(game:HttpGet("https://pastefy.app/h9sod1M8/raw"))()
 	end)
 end
@@ -272,9 +265,7 @@ local function PQZIPAV_fake_script() -- TextButton_5.Button Function
 	local button = script.Parent
 	
 	button.MouseButton1Click:Connect(function()
-		getgenv().request = http_request
-		http.request = http_request
-	
+
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3", true))()
 	end)
 end
@@ -285,8 +276,6 @@ local function ZOHY_fake_script() -- TextButton_6.Button Function
 	local button = script.Parent
 	
 	button.MouseButton1Click:Connect(function()
-		getgenv().request = http_request
-		http.request = http_request
 	
 		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
 	end)
