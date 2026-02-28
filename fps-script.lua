@@ -112,3 +112,5 @@ local function QBFYUY_fake_script() -- TextLabel.drag script
 	end)
 end
 coroutine.wrap(QBFYUY_fake_script)()
+
+print("Hello nice fps")
