@@ -233,7 +233,7 @@ local function GYCOZM_fake_script() -- TextButton_2.Button Function
 	
 	button.MouseButton1Click:Connect(function()
 
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/leanandhigh/Lean.high/refs/heads/main/Lean.lua"))()
 	end)
 end
 coroutine.wrap(GYCOZM_fake_script)()
