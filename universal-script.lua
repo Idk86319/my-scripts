@@ -1,32 +1,49 @@
-
 -- Gui to Lua
 -- Version: 3.2
 
--- Instances:
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
+local ToggleButton = Instance.new("TextButton")
 local TextButton = Instance.new("TextButton")
 local TextButton_2 = Instance.new("TextButton")
 local TextButton_3 = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
-local TextButton1 = Instance.new("TextButton")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextButton_4 = Instance.new("TextButton")
 local TextButton_5 = Instance.new("TextButton")
 local TextButton_6 = Instance.new("TextButton")
 
---Properties:
+-- Services
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+
+-- Properties
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
+-- Toggle Button
+ToggleButton.Parent = ScreenGui
+ToggleButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ToggleButton.BorderColor3 = Color3.fromRGB(68, 0, 255)
+ToggleButton.BorderSizePixel = 2
+ToggleButton.Position = UDim2.new(0.5, -50, 0, 20)
+ToggleButton.Size = UDim2.new(0, 100, 0, 35)
+ToggleButton.Font = Enum.Font.DenkOne
+ToggleButton.Text = "Open"
+ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleButton.TextSize = 18
+ToggleButton.Visible = true
+
+-- Main Frame
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(1, 0, 2)
 Frame.BorderColor3 = Color3.fromRGB(68, 0, 255)
 Frame.BorderSizePixel = 2
-Frame.Position = UDim2.new(0.0135064749, 0, 0.543335855, 0)
-Frame.Size = UDim2.new(0.387135595, 0, 0.432710201, 0)
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.Size = UDim2.new(0, 0, 0, 0)
+Frame.Visible = false
 
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -38,6 +55,7 @@ TextButton.Text = "XVC Hub"
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextSize = 20.000
 TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Visible = false
 
 TextButton_2.Parent = Frame
 TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -49,6 +67,7 @@ TextButton_2.Text = "Universal Esp"
 TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.TextSize = 20.000
 TextButton_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.Visible = false
 
 TextButton_3.Parent = Frame
 TextButton_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -60,6 +79,7 @@ TextButton_3.Text = "Infinite Yield"
 TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_3.TextSize = 20.000
 TextButton_3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.Visible = false
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -71,17 +91,7 @@ TextLabel.Font = Enum.Font.DenkOne
 TextLabel.Text = "What script?"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 41.000
-
-TextButton1.Name = "TextButton1"
-TextButton1.Parent = Frame
-TextButton1.BackgroundColor3 = Color3.fromRGB(156, 43, 31)
-TextButton1.BorderColor3 = Color3.fromRGB(67, 26, 255)
-TextButton1.Position = UDim2.new(0.465172201, 0, 0.879251361, 0)
-TextButton1.Size = UDim2.new(0, 43, 0, 21)
-TextButton1.Font = Enum.Font.SourceSans
-TextButton1.Text = "Close"
-TextButton1.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton1.TextSize = 14.000
+TextLabel.Visible = false
 
 TextLabel_2.Parent = Frame
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -95,6 +105,7 @@ TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14.000
 TextLabel_2.TextWrapped = true
+TextLabel_2.Visible = false
 
 TextButton_4.Parent = Frame
 TextButton_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -106,6 +117,7 @@ TextButton_4.Text = "Ghost hub(has a key)"
 TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.TextSize = 20.000
 TextButton_4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.Visible = false
 
 TextButton_5.Parent = Frame
 TextButton_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -117,6 +129,7 @@ TextButton_5.Text = "SCRIPTHUBV3"
 TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_5.TextSize = 20.000
 TextButton_5.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.Visible = false
 
 TextButton_6.Parent = Frame
 TextButton_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -128,32 +141,112 @@ TextButton_6.Text = "Orca hub"
 TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_6.TextSize = 20.000
 TextButton_6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.Visible = false
+
+-- Notification on load
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Universal Script";
+	Text = "Script loaded successfully!";
+	Duration = 5;
+})
 
 -- Scripts:
 
-local function WZORSG_fake_script() -- Frame.DragScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	local frame = script.Parent
-	local UserInputService = game:GetService("UserInputService")
-	local TweenService = game:GetService("TweenService")
+-- Toggle button: drag + open/close combined
+local function ToggleButton_fake_script()
+	local script = Instance.new('LocalScript', ToggleButton)
+	local btn = script.Parent
 	local dragging = false
 	local dragStart = nil
 	local startPos = nil
-	
-	-- Load animation
-	frame.Size = UDim2.new(0, 0, 0, 0)
-	frame.Position = UDim2.new(0.306, 0, 0.284, 0)
-	frame.BackgroundTransparency = 1
-	
-	local sizeTween = TweenService:Create(frame, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
-		Size = UDim2.new(0, 531, 0, 344),
-		BackgroundTransparency = 0.1
-	})
-	
-	sizeTween:Play()
-	
-	
+	local wasDragged = false
+	local isOpen = false
+
+	btn.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			wasDragged = false
+			dragStart = input.Position
+			startPos = btn.Position
+		end
+	end)
+
+	UserInputService.InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			local delta = input.Position - dragStart
+			if math.abs(delta.X) > 5 or math.abs(delta.Y) > 5 then
+				wasDragged = true
+			end
+			btn.Position = UDim2.new(
+				startPos.X.Scale, startPos.X.Offset + delta.X,
+				startPos.Y.Scale, startPos.Y.Offset + delta.Y
+			)
+		end
+	end)
+
+	UserInputService.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+
+	btn.MouseButton1Click:Connect(function()
+		if wasDragged then return end
+
+		if not isOpen then
+			-- Open the GUI
+			isOpen = true
+			btn.Text = "Close"
+			Frame.Visible = true
+			Frame.Size = UDim2.new(0, 0, 0, 0)
+			Frame.BackgroundTransparency = 1
+
+			local openTween = TweenService:Create(Frame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				Size = UDim2.new(0, 531, 0, 344),
+				BackgroundTransparency = 0.1
+			})
+			openTween:Play()
+
+			-- Show children only after frame has fully opened
+			openTween.Completed:Connect(function()
+				for _, child in ipairs(Frame:GetChildren()) do
+					if child:IsA("GuiObject") then
+						child.Visible = true
+					end
+				end
+			end)
+		else
+			-- Close the GUI
+			isOpen = false
+			btn.Text = "Open"
+
+			for _, child in ipairs(Frame:GetChildren()) do
+				if child:IsA("GuiObject") then
+					child.Visible = false
+				end
+			end
+
+			local closeTween = TweenService:Create(Frame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundTransparency = 1,
+				Size = UDim2.new(0, 0, 0, 0)
+			})
+			closeTween:Play()
+			closeTween.Completed:Connect(function()
+				Frame.Visible = false
+			end)
+		end
+	end)
+end
+coroutine.wrap(ToggleButton_fake_script)()
+
+-- Frame drag script
+local function WZORSG_fake_script()
+	local script = Instance.new('LocalScript', Frame)
+	local frame = script.Parent
+	local dragging = false
+	local dragStart = nil
+	local startPos = nil
+
 	frame.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			dragging = true
@@ -161,14 +254,17 @@ local function WZORSG_fake_script() -- Frame.DragScript
 			startPos = frame.Position
 		end
 	end)
-	
+
 	UserInputService.InputChanged:Connect(function(input)
 		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
 			local delta = input.Position - dragStart
-			frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			frame.Position = UDim2.new(
+				startPos.X.Scale, startPos.X.Offset + delta.X,
+				startPos.Y.Scale, startPos.Y.Offset + delta.Y
+			)
 		end
 	end)
-	
+
 	UserInputService.InputEnded:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			dragging = false
@@ -176,108 +272,57 @@ local function WZORSG_fake_script() -- Frame.DragScript
 	end)
 end
 coroutine.wrap(WZORSG_fake_script)()
-local function NPEF_fake_script() -- Frame.HideFrameScript 
-	local script = Instance.new('LocalScript', Frame)
 
-	local TweenService = game:GetService("TweenService")
-	local frame = script.Parent
-	local button = frame:WaitForChild("TextButton1") -- You can change this to the specific button you want
-	
-	-- Create tween info for smooth animation
-	local tweenInfo = TweenInfo.new(
-		0.5, -- Time (seconds)
-		Enum.EasingStyle.Quad, -- Easing style
-		Enum.EasingDirection.Out, -- Easing direction
-		0, -- Repeat count (0 = no repeat)
-		false, -- Reverses
-		0 -- Delay time
-	)
-	
-	-- Create the tween to fade out and scale down
-	local hideTween = TweenService:Create(
-		frame,
-		tweenInfo,
-		{
-			BackgroundTransparency = 1, -- Fade to transparent
-			Size = UDim2.new(0, 0, 0, 0), -- Scale down to nothing
-			Position = UDim2.new(0.42, 0, 0.32, 0) -- Move to center while shrinking
-		}
-	)
-	
-	-- Connect the button click event
-	button.MouseButton1Click:Connect(function()
-		hideTween:Play()
-		
-		-- Hide the frame completely after tween finishes
-		hideTween.Completed:Connect(function()
-			frame.Visible = false
-		end)
-	end)
-end
-coroutine.wrap(NPEF_fake_script)()
-local function RAYN_fake_script() -- TextButton.Button Function 
-	local script = Instance.new('Script', TextButton)
-
+local function RAYN_fake_script()
+	local script = Instance.new('LocalScript', TextButton)
 	local button = script.Parent
-	
 	button.MouseButton1Click:Connect(function()
-
 		loadstring(game:HttpGet("https://rayfield.xvchubontop.workers.dev/"))()
 	end)
 end
 coroutine.wrap(RAYN_fake_script)()
-local function GYCOZM_fake_script() -- TextButton_2.Button Function 
-	local script = Instance.new('Script', TextButton_2)
 
+local function GYCOZM_fake_script()
+	local script = Instance.new('LocalScript', TextButton_2)
 	local button = script.Parent
-	
 	button.MouseButton1Click:Connect(function()
-
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/leanandhigh/Lean.high/refs/heads/main/Lean.lua"))()
 	end)
 end
 coroutine.wrap(GYCOZM_fake_script)()
-local function OIKGS_fake_script() -- TextButton_3.Button Function 
-	local script = Instance.new('Script', TextButton_3)
 
+local function OIKGS_fake_script()
+	local script = Instance.new('LocalScript', TextButton_3)
 	local button = script.Parent
-	
 	button.MouseButton1Click:Connect(function()
-
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 	end)
 end
 coroutine.wrap(OIKGS_fake_script)()
-local function KMTIBND_fake_script() -- TextButton_4.Button Function 
-	local script = Instance.new('Script', TextButton_4)
 
+local function KMTIBND_fake_script()
+	local script = Instance.new('LocalScript', TextButton_4)
 	local button = script.Parent
-	
 	button.MouseButton1Click:Connect(function()
-
 		loadstring(game:HttpGet("https://pastefy.app/h9sod1M8/raw"))()
 	end)
 end
 coroutine.wrap(KMTIBND_fake_script)()
-local function PQZIPAV_fake_script() -- TextButton_5.Button Function 
-	local script = Instance.new('Script', TextButton_5)
 
+local function PQZIPAV_fake_script()
+	local script = Instance.new('LocalScript', TextButton_5)
 	local button = script.Parent
-	
 	button.MouseButton1Click:Connect(function()
-
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3", true))()
 	end)
 end
 coroutine.wrap(PQZIPAV_fake_script)()
-local function ZOHY_fake_script() -- TextButton_6.Button Function 
-	local script = Instance.new('Script', TextButton_6)
 
+local function ZOHY_fake_script()
+	local script = Instance.new('LocalScript', TextButton_6)
 	local button = script.Parent
-	
 	button.MouseButton1Click:Connect(function()
-	
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
 	end)
 end
 coroutine.wrap(ZOHY_fake_script)()
