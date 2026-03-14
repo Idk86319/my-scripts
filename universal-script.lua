@@ -113,7 +113,7 @@ TextButton_4.BorderColor3 = Color3.fromRGB(68, 0, 255)
 TextButton_4.Position = UDim2.new(0.559820175, 0, 0.243749306, 0)
 TextButton_4.Size = UDim2.new(0, 200, 0, 50)
 TextButton_4.Font = Enum.Font.DenkOne
-TextButton_4.Text = "Ghost hub(has a key)"
+TextButton_4.Text = "Best Flinger"
 TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.TextSize = 20.000
 TextButton_4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
@@ -304,7 +304,7 @@ local function KMTIBND_fake_script()
 	local script = Instance.new('LocalScript', TextButton_4)
 	local button = script.Parent
 	button.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/h9sod1M8/raw"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/fhrdimybds-byte/Sarturn-hub-Universal-script-/refs/heads/main/main.Lua"))()
 	end)
 end
 coroutine.wrap(KMTIBND_fake_script)()
