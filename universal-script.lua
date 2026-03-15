@@ -12,6 +12,7 @@ local TextLabel_2 = Instance.new("TextLabel")
 local TextButton_4 = Instance.new("TextButton")
 local TextButton_5 = Instance.new("TextButton")
 local TextButton_6 = Instance.new("TextButton")
+ScreenGui.ResetOnSpawn = false
 
 -- Services
 local UserInputService = game:GetService("UserInputService")
