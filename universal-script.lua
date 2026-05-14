@@ -287,7 +287,7 @@ local function GYCOZM_fake_script()
 	local script = Instance.new('LocalScript', TextButton_2)
 	local button = script.Parent
 	button.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/leanandhigh/Lean.high/refs/heads/main/Lean.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/zzsiren/Megaskid.wtf/refs/heads/main/script.lua", true))()
 	end)
 end
 coroutine.wrap(GYCOZM_fake_script)()
